@@ -9,6 +9,12 @@ This provides an interactive web UI that:
 The dashboard is organized with a sidebar to navigate between sections.
 """
 
+import os
+import sys
+
+# Ensure project root is in the Python path for local and Streamlit Cloud deployments
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 import streamlit as st
 import pandas as pd
 import numpy as np
